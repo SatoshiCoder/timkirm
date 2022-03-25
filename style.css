@@ -1,0 +1,93 @@
+body 
+{
+
+
+display: flex;
+text-align: center;
+justify-content: center;
+min-height: 100vh;
+background: #297eff;	
+}
+.share
+{
+position: relative;
+width: 60px;
+height: 60px;
+background: #fff;
+border-radius: 60px;
+transition: 0.05s;
+box-shadow: 0 0 0 5px #2573ef;
+margin-top: 50vh;
+overflow: hidden;
+}
+.share .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+.share .icon::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #287efc;
+    border-radius: 50%;
+        transform: translate(-4px,-4px);
+}
+.share .icon::after{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 12px;
+    background: #287efc;
+    transform: translate(6px,6px) rotate(315deg);
+}
+.share.active{
+    width: 360px;
+}
+input{
+    outline: none;
+    border: none;
+    width: 200px;
+    height: 58px;
+    font-size: 18px;
+    position: 10px 0;
+}
+.clear{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    right: 15px;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clear::before{
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 15px;
+    background: #999;
+    transform: rotate(45deg);
+}
+.clear::after{
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 15px;
+    background: #999;
+    transform: rotate(315deg);
+}
